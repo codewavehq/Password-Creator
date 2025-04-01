@@ -1,0 +1,216 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*the colour I need 
+    wrb site link  : https://colorhunt.co/palette/faf1e6fdfaf6e4efe799bc85
+    #FAF1E6
+    #FDFAF6
+    #E4EFE7
+    #99BC85
+
+*/
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF1E6;
+    color: #000000;
+
+}
+form
+{
+    background-color: #FDFAF6; /* لون الخلفية */
+
+    padding: 20px; /* مساحة داخلية */
+    border-radius: 10px; /* زوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل */
+    width: 500px;
+    margin: 50px auto; /* توسيط النموذج */
+    
+}
+
+@keyframes errorAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+    
+}
+
+input[type="checkbox"] {
+    width: 20px; 
+    height: 20px;
+    border-radius: 5px; 
+    appearance: none; /* إزالة التنسيق الافتراضي */
+    background-color: #FAF1E6; /* خلفية خضراء */
+    border: 0px solid #000; /* إضافة حدود */
+    cursor: pointer;
+    position: relative; /* لجعل ::after يعمل بشكل صحيح */
+    transition: all 0.3s ease; /* تأثير الانتقال */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ظل */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #E4EFE7; /* تغيير اللون عند التحديد */
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔'; /* علامة الصح */
+    color: #99BC85; /* لون العلامة */
+    font-size: 16px; /* حجم العلامة */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* لتوسيط العلامة */
+}
+
+label
+{
+   
+    margin: 20px 10px;
+    font-size: 18px; /* حجم الخط */
+    color: #000; /* لون النص */
+}
+
+input[type="text"]#output
+{
+    width: 65%;
+    height: 40px; /* ارتفاع الحقل */
+    padding: 10px; /* مساحة داخلية */
+    padding-left: 10px;
+    margin: 10px 0;
+    border: 2px solid #FAF1E6; /* لون الحدود */
+    background-color: #FAF1E6; /* لون الخلفية */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); /* ظل */
+    border-radius: 10px; /* زوايا دائرية */
+    font-size: 16px; /* حجم الخط */
+    color: #000; /* لون النص */
+}
+.generate-password
+{
+    display: block;
+    width: 130px;
+    padding: 5px;
+    margin: 30px auto;
+    background-color: #FAF1E6; /* لون الخلفية */
+    color: #000000; /* لون النص */
+    border: none; /* إزالة الحدود */
+    border-radius: 5px; /* زوايا دائرية */
+    font-size: 16px; /* حجم الخط */
+    cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
+    transition: all 0.3s ease; /* تأثير الانتقال */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل */
+    text-align: center; /* توسيط النص داخل الزر */
+}
+
+.generate-password:hover
+{
+    background-color: #FAF1E6; /* لون الخلفية عند التمرير */
+    color: #99BC85; /* لون النص عند التمرير */
+    transform: scale(1.1); /* تكبير الزر عند التمرير */
+}
+.generate-password:active
+{
+    transform: scale(0.9); /* تصغير الزر عند الضغط */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* ظل أصغر عند الضغط */
+
+}
+
+input[type="text"]:focus
+{
+    outline: none; /* إزالة الإطار الافتراضي */
+    border-color: #99BC85; /* تغيير لون الحدود عند التركيز */
+    box-shadow: 2 0 5px rgba(153, 188, 133, 0.5); /* ظل عند التركيز */
+}
+
+#copy_button
+{
+    background-color: #FAF1E6;
+    padding: 4px;
+    border: none;
+    border-radius: 5px; /* زوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل */
+    cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
+
+    position: relative; /* لجعل الزر فوق حقل النص */
+    top: 7px; /* توسيط عمودي */
+}
+
+#copy_button img
+{
+   height: 30px;
+   width: 30px;
+}
+
+#copy_button:hover img
+{
+    transform: scale(1.1); /* تكبير الصورة عند التمرير */
+    transition: all 0.3s ease; /* تأثير الانتقال */
+}
+#copy_button:active img
+{
+    transform: scale(0.9); /* تصغير الصورة عند الضغط */
+    transition: all 0.3s ease; /* تأثير الانتقال */
+}
+#password-word
+{
+    display: b;
+    width: 120px; /* عرض الحقل */
+    height: 40px; /* ارتفاع الحقل */
+    padding: 10px; /* مساحة داخلية */
+    padding-left: 10px;
+    margin: 10px 0;
+    border: 0px solid #FAF1E6; /* لون الحدود */
+    background-color: #FAF1E6; /* لون الخلفية */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); /* ظل */
+    border-radius: 10px; /* زوايا دائرية */
+    font-size: 16px; /* حجم الخط */
+    color: #000; /* لون النص */
+    outline: none;
+}
+#password-length
+{
+    width: 70px; /* عرض الحقل */
+    height: 40px; /* ارتفاع الحقل */
+    padding: 10px; /* مساحة داخلية */
+    padding-left: 10px;
+    margin: 10px 0;
+    border: 2px solid #FAF1E6; /* لون الحدود */
+    background-color: #FAF1E6; /* لون الخلفية */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); /* ظل */
+    border-radius: 10px; /* زوايا دائرية */
+    font-size: 16px; /* حجم الخط */
+    color: #000; /* لون النص */
+    outline: none;
+    
+    /* إخفاء الأسهم */
+    appearance: textfield; /* لإخفاء الأسهم في Firefox */
+}
+
+#password-length::-webkit-inner-spin-button,
+#password-length::-webkit-outer-spin-button {
+    appearance: none; /* إخفاء الأسهم في Chrome و Edge */
+    margin: 0; /* إزالة أي مسافات إضافية */
+}
+
+.notes
+{
+    width: 80%;
+    height: 100px; /* ارتفاع الحقل */
+    padding: 10px; /* مساحة داخلية */
+    padding-left: 10px;
+    margin: 10px auto;
+    border: 2px solid #FAF1E6; /* لون الحدود */
+    background-color: #FAF1E6; /* لون الخلفية */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); /* ظل */
+    border-radius: 10px; /* زوايا دائرية */
+    font-size: 16px; /* حجم الخط */
+    color: #000; /* لون النص */
+    outline: none;
+    resize: none; /* منع تغيير حجم الحقل */
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate strong and secure passwords instantly! 🔐 Protect your accounts with our random password generator.">
+    <meta name="keywords" content="password generator, strong passwords, secure passwords, random passwords, online password tool">
+    <meta name="author" content="Password Creator">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABDUlEQVRIS2NkoDFgpLH5DKMWEAzh4RlEIUB/ZwKxExB/BOLzQFwKxGcIhgcWBehB1A1UU4JF3V+gWDwQLyXVEmQLwoCaV0INaAbS06DsHCBdDcR/gNiSVJ8gW3AOqNkQiIuAuB/NpSALWoB4DRCHkuILZAtAwcAExKJA/AbNEEkg/xkJBsPNRbbgC9AAbiAGGfaCFhYcBhpqA8TlQNyFZkEtkN8ExOuBOAgq9x9KwxyJzgdLI/vAD8jfCNUECu/JQMwGxKBIBln6D4itgPgkuRaA9IFcDkrz6AAUPwlAvASLHEyIoA9gCkEZLQ+IbYH4HRBfBOIyIKZKRsPjQPKkhmdhR15Y4NA1GkQEgxMAoC8rGfOgVUgAAAAASUVORK5CYII=" type="image/png">
+   
+    <link rel="stylesheet" href="style.css">
+    <title>Password Creator</title>
+</head>
+<body>
+    
+    <form action="" method="get">
+
+        <label for="outpot">Password</label>
+        <input type="text" name="" id="output" placeholder="Generated Password" >
+        <button title="copy" type="button" id="copy_button" onclick="copyPassword()">
+
+            <img alt="copy icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAyElEQVRIS2NkoDFgpLH5DMRY4A90RAcQaxDpmOtAdSVAvA2knhgLXgDViRNpOEzZPSBDmVgL/kN1EeMYkFIU9cRoGrUAHn0UpRakRIAzDp4AFUmTm1qIsYCiyByUFsB8hB5qsKSNy8c44wBdA80tIBTfuBwA0vcAiBXRiwpyIxndIZeAApXYCjtqBRGKhchlEd0tIDYO8BaY+HxAdQseAk2UI2Qqmjw8teDSh+wDUGHXCcTqRFqCklqIsYBIc0lTRkyNRpqJaKoBCwY4GUKlWqgAAAAASUVORK5CYII="/>
+        </button>
+        <br><br>
+
+        <label for="password-word">word in your password</label>
+        <input type="text" id="password-word"  name="password" placeholder="Enter a word" required>
+        <br>
+        
+        <label for="password-length">Password Length:</label>
+        <input type="number" value="8" id="password-length" name="length" min="6" max="20" required>
+        <br><br>
+
+        <label for="uppercase">Include Uppercase Letters:</label>
+        <input type="checkbox" id="uppercase" name="uppercase">
+        <br><br>
+
+        <label for="lowercase">Include Lowercase Letters:</label>
+        <input type="checkbox" id="lowercase" name="lowercase">
+        <br><br>
+
+        <label for="numbers">Include Numbers:</label>
+        <input type="checkbox" id="numbers" name="numbers">
+        <br><br>
+
+        <label title="like these(/ * $ & ^) "  for="special">Include Special Characters:</label>
+        <input type="checkbox" id="special" name="special">
+        
+        
+       
+        <button  class="generate-password" id="generate-password-Code" type="button">Generate Password</button>
+    
+        <h3 id="notes-code" class="notes">notes: 
+            
+        </h3>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
